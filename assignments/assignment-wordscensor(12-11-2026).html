@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Words-censor</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        padding: 20px;
+      }
+      .container {
+        width: 100%;
+        max-width: 700px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        color: white;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        resize: none;
+        font-size: 16px;
+      }
+      button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: #00c896;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:active {
+        transform: translateY(2px);
+      }
+      .result {
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 12px;
+        min-height: 80px;
+      }
+      .result h3 {
+        margin-bottom: 10px;
+      }
+      .output {
+        color: #fff;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛡️ Word Sensor Application</h1>
+      <h2>Filtered words: 'idiot' 'stupid' 'foolish' 'clueless'</h2>
+      <textarea id="vulgarwords">The guy is an idiot and a foolish person. Sometimes he acts clueless and makes stupid decisions.</textarea>
+      <button onclick="filteredWords()">Filter Sentence</button>
+      <div class="result">
+        <h3>Filtered Output:</h3>
+        <p id="output" class="output">Your filtered sentence will appear here...</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let input = document.getElementById('vulgarwords')
+
+    function filteredWords() {
+        let vulgarinputs = input.value
+
+        vulgarinputs = vulgarinputs.replaceAll('stupid', 'st***d')
+
+        vulgarinputs = vulgarinputs.replaceAll('idiot', 'id**t')
+
+        vulgarinputs = vulgarinputs.replaceAll('foolish', 'f**l*sh')
+
+        vulgarinputs = vulgarinputs.replaceAll('clueless', 'cl**l*ss')
+        
+        output.innerHTML = vulgarinputs;
+    }
+  </script>
+</html>

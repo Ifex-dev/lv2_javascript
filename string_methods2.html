@@ -74,5 +74,12 @@
     let sentence = 'This book given to me by my Mother is a very nice BOOK. It is one of the books I would love to have in my library'
     //Expected//'This novel given to me by my mother is a very nice novel. It is one of the novel I would love to have in my library'
     
-    sentence = sentence.replace()
+    sentence = sentence.replace('book', 'novel').replace('BOOK', 'novel').replace('books','novels').replace('Mother','mother')
+
+    console.log(sentence); // This novel given to me by my mother is a very nice novel. It is one of the novels I would love to have in my library
+
+    let sentence2 = 'This book is a very nice book';
+
+    console.log(sentence2.replace('book', 'novel').replace('book','novel'));
+    console.log(sentence2.replaceAll('book', 'novel'));
 </script>
