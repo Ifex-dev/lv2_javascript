@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="numField1" />
+    <input type="text" id="numField2" />
+    <button onclick="testNumber( )">submit</button>
+    <div id="output"></div>
+  </body>
+  <script>
+    //if , else. switch, tenary
+
+    if (5>3) {
+        console.log('This code 1 ran successfully');
+
+    }
+    if (3>5 || 7<6) {
+        console.log('Five is greater than Three');
+
+    }
+    if (5>3) {
+        console.log('This code 2 ran successfully');
+    } else {
+        console.log('Five is less than Three');
+    }
+    if (3>5) {
+        console.log('Three is greater than Five');
+    } else {
+
+    }
+
+    function testNumber() {
+
+        let inputField1 = document.getElementById('numField1')
+        let inputField2 = document.getElementById('numField2')
+
+        let inputValue1 = +inputField1.value
+        let inputValue2 = +inputField2.value
+
+        let outputField = document.getElementById('output')
+
+        if (inputValue1 > inputValue2) {
+            outputField.innerHTML = `${inputValue1} is greater than ${inputValue2}`
+        } else if(inputValue1 == inputValue2){
+            outputField.innerHTML = `${inputValue1} is equal to ${inputValue2}`
+        }
+        else { 
+            outputField.innerHTML = `${inputValue1} is lesser than ${inputValue2}`
+        }
+    }
+
+        ''//falsy
+        ' '//truthy
+        if ('            '.trim()) {
+            console.log('ade');//falsy
+            
+        }
+        if ('              ') {
+            console.log('ade');//truthy
+            
+        }
+  </script>
+</html>

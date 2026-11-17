@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Firstinput">
+    <input type="text" id="Secondinput">
+    <button onclick="interprete()" >interprete</button>
+    <output id="output"></output>
+</body>
+<script>
+    function interprete() {
+        let Firstinput = Number(document.getElementById("Firstinput").value);
+        let Secondinput = Number(document.getElementById("Secondinput").value);
+
+        let min = Math.min(Firstinput , Secondinput);
+        let max = Math.max(Firstinput , Secondinput);
+
+        if (min < max) {
+            let FinalResult = min + 'is less than' + max
+            output.innerHTML = FinalResult
+        }
+        
+    }
+</script>
+</html>
