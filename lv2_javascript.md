@@ -7,3 +7,18 @@ This file is my javascript note.  **It would cover areas have completed in class
 - [x] [numbers.html](numbers.html) *diff btw strings and numbers, with some simple arithmetic operations*
 - [x] [number_methods](number_method.html) *as the name states function that can be carried out with the Number with the outputs it gives and what it returns in 'string/number'.*
 - [x] [math_methods.html](math_method.html) *as the name states fuctions that can be carried out with Math. (square-root,cube-root,raise_to_power,round-up/off)*
+- [ ] [numbers.html](numbers.html) *text*
+- [ ] [number_method.html](number_method.html) *text*
+- [ ] [random_number.html](random_number.html) *text*
+- [ ] [logical_operators.html](logical_operators.html) *text*
+- [ ] [strings.html](strings.html) *text*
+- [ ] [string_method.html](string_method.html) *text*
+- [ ] [string_methods2.html](string_methods2.html) *text*
+- [ ] [assignment_operators.html](assignment_operators.html) **
+- [ ] [conditionals.html](conditionals.html) **
+- [ ] [switch_statement.html](switch_statement.html) **
+- [ ] [tenary.html](tenary.html)
+- [ ] []() **
+- [ ] []() **
+- [ ] []() **
+- [ ] [loops.html](loops.html) **

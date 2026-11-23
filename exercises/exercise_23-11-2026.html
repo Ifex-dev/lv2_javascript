@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+  <body>
+    <input type="text" id="inputs" />
+    <button onclick="generateTable()">submit</button>
+    <div id="output"></div>
+  </body>
+</html>
+<script>
+  let input = document.getElementById("inputs");
+  let Input = +input.value;
+  let output = document.getElementById("output");
+
+  function generateTable() {
+    for (let index = 1; index < 12; index++) {
+      console.log(index * Input);
+    }
+  }
+</script>
