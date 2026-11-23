@@ -8,7 +8,7 @@
   <body>
     <input type="text" id="numField1" />
     <input type="text" id="numField2" />
-    <button onclick="testNumber( )">submit</button>
+    <button onclick="testNumber()">submit</button>
     <div id="output"></div>
   </body>
   <script>
@@ -43,6 +43,12 @@
 
         let outputField = document.getElementById('output')
 
+        if (condition) {
+            
+        } else {
+            
+        }
+
         if (inputValue1 > inputValue2) {
             outputField.innerHTML = `${inputValue1} is greater than ${inputValue2}`
         } else if(inputValue1 == inputValue2){
@@ -53,7 +59,7 @@
         }
     }
 
-        ''//falsy
+        ''//falsy  ''
         ' '//truthy
         if ('            '.trim()) {
             console.log('ade');//falsy
