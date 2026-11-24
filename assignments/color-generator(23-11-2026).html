@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            margin: 12px 0 0 20px;
+            gap: 7px;
+
+            label {
+                font-size: 18px;
+                font-weight: 800;
+            }
+
+            input {
+                padding: 4px;
+                background: ivory;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button {
+                background-color: #FF0000;
+                background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #00BFFF, #4B0082, #8B00FF);
+                color: #FFFFFF;
+                font-weight: bold;
+                font-size: 18px;
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button:active {
+                transform: translateY(2px);
+            }
+        }
+
+        #parent {
+            margin: 20px 0 0 20px;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .box {
+                height: 180px;
+                width: 200px;
+                display: flex;
+                font-size: 17px;
+                font-weight: 700;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <label for="input">Input number of boxes here :</label>
+        <input type="text" id="input">
+        <button onclick="generate()">Generate</button>
+        <div id="output"></div>
+    </main>
+    <div id="parent">
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    function generate() {
+        let input = document.getElementById('input');
+        let output = document.getElementById('output');
+        let parent = document.getElementById('parent');
+
+        let value = input.value.trim();
+
+        if (value === "") {
+            output.innerHTML = "Please enter a valid value";
+            parent.innerHTML = "";
+        }
+        else if (isNaN(value)) {
+            output.innerHTML = "Please enter a valid number";
+            parent.innerHTML = "";
+        }
+        else if (Number(value) < 1) {
+            output.innerHTML = "Enter a valid number of boxes";
+            parent.innerHTML = "";
+        }
+        else {
+            output.innerHTML = "";
+            let num = Number(value);
+            parent.innerHTML = "";
+
+            for (let i = 1; i <= num; i++) {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+
+                let rgbColor = `rgb(${r}, ${g}, ${b})`;
+
+                let final = `<div class="box" style="background-color: ${rgbColor}">${rgbColor}</div>`;
+
+                parent.innerHTML += final;
+            }
+        }
+    }
+</script>
+
+</html>
+<!-- <script>
+    let input = document.getElementById('input')
+    let inpuT = input.value.trim();
+    let Input = +input
+
+    let output = document.getElementById('output')
+
+    function generate() {
+        if (inpuT) {
+            output.innerHTML = "";
+            if (isNaN(inpuT)) {
+                output.innerHTML = `Please enter a valid number`
+            } else {
+                let Input = Number(inpuT)
+                for (let index = 1; index <= Input; index++) {
+
+                    let box = document.getElementById('box')
+
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+                    output.innerHTML += `${box}`
+                }
+            }
+        }
+        else if (input < 1) {
+            output.innerHTML = `Enter a valid number of boxes`
+        }
+        else {
+            // output.innerHTML = `Please enter a valid value`
+        }
+    }
+</script> -->

@@ -21,4 +21,13 @@ This file is my javascript note.  **It would cover areas have completed in class
 - [ ] []() **
 - [ ] []() **
 - [ ] []() **
-- [ ] [loops.html](loops.html) **
+- [x] [loops.html](loops.html) *Loop is a property that executes operations on it's own **i.e:repeats task;***
+## Points
+- .trim() works with string not a number 
+``` javascript
+   let input = document.getElementById('input');
+   let value = input.value.trim();
+   after ⬆️, it is then converted to a number
+
+   value = +value
+```
